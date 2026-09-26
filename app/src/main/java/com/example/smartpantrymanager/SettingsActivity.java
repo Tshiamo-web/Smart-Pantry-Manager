@@ -43,5 +43,19 @@ public class SettingsActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (databaseHelper != null && textViewRecipeCount != null) {
+            int recipeCount = databaseHelper.getRecipeCount();
+
+            textViewRecipeCount.setText(
+                    "Smart Pantry Manager • Mobile Application Development 700\n\n" +
+                            "Recipe collection: " + recipeCount + " recipes available"
+            );
+        }
     }
 }
