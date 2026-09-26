@@ -62,13 +62,20 @@ public class PantryListActivity extends AppCompatActivity {
         List<PantryItem> pantryItems = databaseHelper.getAllPantryItems();
 
         if (pantryItems.isEmpty()) {
-
             TextView emptyMessage = new TextView(this);
-            emptyMessage.setText("No pantry items found.");
+
+            emptyMessage.setText(
+                    "Your pantry is empty. 🥫\n\n" +
+                            "Add ingredients to your pantry to start " +
+                            "getting recipe suggestions. 💗"
+            );
+
             emptyMessage.setTextSize(18);
+            emptyMessage.setTextColor(Color.rgb(142, 106, 143));
+            emptyMessage.setGravity(android.view.Gravity.CENTER);
+            emptyMessage.setPadding(24, 40, 24, 40);
 
             pantryItemsContainer.addView(emptyMessage);
-
             return;
         }
 
