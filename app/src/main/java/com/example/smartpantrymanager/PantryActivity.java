@@ -76,12 +76,18 @@ public class PantryActivity extends AppCompatActivity {
 
         try {
             quantity = Double.parseDouble(quantityText);
+
+            if (quantity <= 0) {
+                editTextQuantity.setError("Quantity must be greater than 0");
+                editTextQuantity.requestFocus();
+                return;
+            }
+
         } catch (NumberFormatException e) {
             editTextQuantity.setError("Please enter a valid quantity");
             editTextQuantity.requestFocus();
             return;
         }
-
         PantryItem item = new PantryItem(
                 name,
                 quantity,
