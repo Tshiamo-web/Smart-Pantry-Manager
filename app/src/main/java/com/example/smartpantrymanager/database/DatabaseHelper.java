@@ -474,6 +474,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return recipe;
     }
 
+    // =========================================================
+// RECIPE COUNT
+// =========================================================
+
+    public int getRecipeCount() {
+
+        SQLiteDatabase db =
+                this.getReadableDatabase();
+
+        Cursor cursor =
+                db.rawQuery(
+                        "SELECT COUNT(*) FROM " + TABLE_RECIPES,
+                        null
+                );
+
+        int count = 0;
+
+        if (cursor.moveToFirst()) {
+            count = cursor.getInt(0);
+        }
+
+        cursor.close();
+        db.close();
+
+        return count;
+    }
 
     // =========================================================
     // SEED 20 SIMPLE & VARIED RECIPES

@@ -175,6 +175,7 @@
                 android:layout_marginBottom="8dp" />
 
             <TextView
+                android:id="@+id/textViewRecipeCount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Smart Pantry Manager • Mobile Application Development 700"
