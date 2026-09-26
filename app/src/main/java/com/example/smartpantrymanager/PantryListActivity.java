@@ -129,14 +129,18 @@ public class PantryListActivity extends AppCompatActivity {
                     dateFormat.setLenient(false);
 
                     Date expiryDate = dateFormat.parse(expiryDateText);
+
                     Date today = new Date();
 
+                    String todayText = dateFormat.format(today);
+
+                    Date todayDate = dateFormat.parse(todayText);
+
                     long differenceInMillis =
-                            expiryDate.getTime() - today.getTime();
+                            expiryDate.getTime() - todayDate.getTime();
 
                     long daysUntilExpiry =
                             TimeUnit.MILLISECONDS.toDays(differenceInMillis);
-
                     if (daysUntilExpiry < 0) {
 
                         textViewExpiryStatus.setText(
