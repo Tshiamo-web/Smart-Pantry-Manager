@@ -92,8 +92,9 @@ public class SuggestedRecipesActivity extends AppCompatActivity {
             );
 
             textViewNoRecipes.setText(
-                    "No recipes match your pantry yet.\n\n" +
-                            "Add more ingredients to discover recipes! 💗"
+                    "No complete recipes are available yet.\n\n" +
+                            "Make sure you have all the required ingredients " +
+                            "and quantities in your pantry. 💗"
             );
 
             textViewNoRecipes.setVisibility(
