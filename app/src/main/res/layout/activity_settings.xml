@@ -130,6 +130,34 @@
 
         </LinearLayout>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/pantry_item_background"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💡 How It Works"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:textColor="#AB5A7E"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add the ingredients you have to your pantry and make sure their quantities and units are correct. Then open Suggested Recipes to see meals you can actually prepare. Select a recipe to view its ingredients and preparation steps."
+                android:textSize="15sp"
+                android:textColor="#5F4B5F"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
